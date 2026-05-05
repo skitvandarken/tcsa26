@@ -49,7 +49,7 @@ jobs:
       - name: 🐛 Verify Build Output
         run: |
           echo "Build directory contents:"
-          ls -la dist/tceu/browser
+          ls -la dist/tcsa26/browser
           echo "Checking for Firebase config in main.js:"
           grep -o "apiKey" dist/tceu/browser/main.js || echo "No API key found in build"
 
