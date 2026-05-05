@@ -60,7 +60,7 @@ jobs:
         run: |
           # ===== CONFIGURATION =====
           BUILD_DIR="dist/tceu/browser"
-          WEBDISK_URL="https://tcsa.marketing.host2africa.comt:2078"
+          WEBDISK_URL="https://tcsa.marketing.host2africa.com:2078"
 
           # Protected items (won't be touched)
           PROTECTED_ITEMS=(
