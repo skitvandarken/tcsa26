@@ -59,7 +59,7 @@ jobs:
           WEBDISK_PASSWORD: ${{ secrets.WEBDISK_PASSWORD }}
         run: |
           # ===== CONFIGURATION =====
-          BUILD_DIR="dist/tceu/browser"
+          BUILD_DIR="dist/tcsa26/browser"
           WEBDISK_URL="https://tcsa.marketing.host2africa.com:2078"
 
           # Protected items (won't be touched)
