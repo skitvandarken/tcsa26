@@ -1,0 +1,148 @@
+.tc-service-page {
+    background: var(--bg-shell);
+
+    .tc-service-hero {
+        background: linear-gradient(135deg, var(--bg-deep) 0%, var(--bg-shell) 100%);
+        padding-top: 160px;
+        
+        .tc-badge {
+            display: inline-block;
+            background: var(--teal-dim);
+            color: var(--teal);
+            padding: 6px 16px;
+            border-radius: 100px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 24px;
+        }
+
+        .tc-page-title {
+            font-family: var(--font-display);
+            font-weight: 800;
+            font-size: 4rem;
+            line-height: 1.1;
+            color: var(--text-hi);
+            margin-bottom: 24px;
+
+            .highlight {
+                color: var(--blue);
+            }
+        }
+
+        .tc-page-lead {
+            font-size: 1.25rem;
+            color: var(--text-mid);
+            max-width: 600px;
+            line-height: 1.6;
+        }
+
+        .tc-btn-primary {
+            background: var(--blue);
+            color: white;
+            padding: 0 40px;
+            height: 54px;
+            line-height: 54px;
+            border-radius: 100px;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            
+            &:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 15px 30px rgba(0, 98, 224, 0.2);
+            }
+        }
+    }
+
+    .tc-section-title {
+        font-family: var(--font-display);
+        font-weight: 800;
+        font-size: 2.5rem;
+        color: var(--text-hi);
+        margin-bottom: 20px;
+    }
+
+    .tc-section-text {
+        font-size: 1.1rem;
+        color: var(--text-mid);
+        line-height: 1.7;
+    }
+
+    .tc-feature-card {
+        background: var(--bg-panel);
+        padding: 40px 30px;
+        border-radius: var(--radius-lg);
+        border: 1px solid var(--border-lo);
+        height: 100%;
+        transition: all 0.3s ease;
+
+        &:hover {
+            border-color: var(--blue);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .tc-icon-box {
+            width: 50px;
+            height: 50px;
+            background: var(--teal-dim);
+            color: var(--teal);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            margin-bottom: 24px;
+        }
+
+        h3 {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: var(--text-hi);
+            margin-bottom: 12px;
+        }
+
+        p {
+            font-size: 0.95rem;
+            color: var(--text-mid);
+            line-height: 1.6;
+            margin: 0;
+        }
+    }
+
+    .tc-cta-section {
+        .tc-cta-card {
+            background: linear-gradient(135deg, var(--blue) 0%, darken(#0062E0, 10%) 100%);
+            color: white;
+            box-shadow: 0 30px 60px rgba(0, 98, 224, 0.2);
+
+            h2 {
+                color: white;
+                font-family: var(--font-display);
+                font-weight: 800;
+                font-size: 2.5rem;
+            }
+
+            p {
+                opacity: 0.9;
+                font-size: 1.1rem;
+            }
+
+            .tc-btn-white {
+                background: white;
+                color: var(--blue);
+                padding: 0 40px;
+                height: 54px;
+                line-height: 54px;
+                border-radius: 100px;
+                font-weight: 700;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
+}

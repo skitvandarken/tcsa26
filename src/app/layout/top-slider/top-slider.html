@@ -1,0 +1,25 @@
+<div class="tc-top-slider-container uk-position-relative uk-visible-toggle" uk-slideshow="animation: slide; autoplay: true; autoplay-interval: 6000; height: 550">
+    <ul class="uk-slideshow-items">
+        @for (slide of slides; track $index) {
+        <li>
+            <div class="uk-position-cover uk-flex uk-flex-middle uk-flex-center tc-slide-item" 
+                 [style.backgroundImage]="slide.img ? 'linear-gradient(rgba(13, 18, 26, 0.4), rgba(13, 18, 26, 0.4)), url(' + slide.img + ')' : ''">
+                <div class="uk-container uk-text-center">
+                    @if (!slide.img) {
+                        <h2 class="tc-slide-title" uk-slideshow-parallax="x: 100,-100">{{ slide.title }}</h2>
+                        <p class="tc-slide-desc" uk-slideshow-parallax="x: 200,-200">{{ slide.desc }}</p>
+                    }
+                </div>
+            </div>
+        </li>
+        }
+    </ul>
+
+    <!-- Arrows -->
+    <a class="uk-position-center-left uk-position-small uk-hidden-hover tc-slide-nav" href uk-slidenav-previous uk-slideshow-item="previous"></a>
+    <a class="uk-position-center-right uk-position-small uk-hidden-hover tc-slide-nav" href uk-slidenav-next uk-slideshow-item="next"></a>
+
+    <div class="uk-position-bottom-center uk-position-small">
+        <ul class="uk-slideshow-nav uk-dotnav uk-flex-center"></ul>
+    </div>
+</div>

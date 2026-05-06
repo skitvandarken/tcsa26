@@ -1,0 +1,92 @@
+<app-navbar></app-navbar>
+
+<main class="tc-service-page">
+    <section class="tc-service-hero uk-section uk-section-xlarge">
+        <div class="uk-container">
+            <div class="uk-grid-large uk-flex-middle" uk-grid>
+                <div class="uk-width-1-2@m">
+                    <div class="tc-service-content" uk-scrollspy="cls: uk-animation-slide-left-small">
+                        <span class="tc-badge">Connectivity</span>
+                        <h1 class="tc-page-title">Remote <br> <span class="highlight">Peering</span></h1>
+                        <p class="tc-page-lead">
+                            Access the world's leading Internet Exchange Points (IXPs) remotely, improving network performance and reducing costs.
+                        </p>
+                        <div class="uk-margin-large-top">
+                            <a href="/meeting" class="uk-button tc-btn-primary">Get Peering</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="uk-width-1-2@m">
+                    <div class="tc-service-image uk-border-rounded-large uk-overflow-hidden uk-box-shadow-xlarge">
+                        <img src="GlobalPresence.png" alt="Remote Peering">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="overview" class="uk-section tc-overview-section">
+        <div class="uk-container uk-container-small uk-text-center">
+            <h2 class="tc-section-title">Overview</h2>
+            <p class="tc-section-text">
+                Remote Peering allows you to connect to a peering point without being physically present in the same data center. This eliminates the need for hardware investment and complex logistics while giving you all the benefits of direct peering.
+            </p>
+        </div>
+    </section>
+
+    <section id="solutions" class="uk-section uk-section-muted">
+        <div class="uk-container">
+            <div class="uk-grid-large uk-child-width-1-2@m" uk-grid>
+                <div>
+                    <h2 class="tc-section-title">Solutions</h2>
+                    <p class="tc-section-text">
+                        We provide access to major IXPs in Africa, Europe, and the Americas through our high-speed global network.
+                    </p>
+                </div>
+                <div>
+                    <div class="tc-solution-card uk-card uk-card-default uk-card-body uk-border-rounded-medium">
+                        <ul class="uk-list uk-list-bullet">
+                            <li>NAP Africa & JINX connectivity</li>
+                            <li>LINX, DE-CIX, and AMS-IX access</li>
+                            <li>VLAN-based peering sessions</li>
+                            <li>Fully managed interconnection</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="uk-section">
+        <div class="uk-container">
+            <div class="uk-text-center uk-margin-large-bottom">
+                <h2 class="tc-section-title">Features & Benefits</h2>
+            </div>
+            <div class="uk-grid-medium uk-child-width-1-2@s uk-child-width-1-4@m" uk-grid>
+                @for (feature of features; track feature.title) {
+                <div>
+                    <div class="tc-feature-card">
+                        <div class="tc-icon-box">
+                            <span uk-icon="icon: push; ratio: 1.2"></span>
+                        </div>
+                        <h3>{{ feature.title }}</h3>
+                        <p>{{ feature.desc }}</p>
+                    </div>
+                </div>
+                }
+            </div>
+        </div>
+    </section>
+
+    <section class="uk-section tc-cta-section uk-text-center">
+        <div class="uk-container">
+            <div class="tc-cta-card uk-padding-large uk-border-rounded-large">
+                <h2 class="uk-margin-small-bottom">Globalize Your Peering Strategy</h2>
+                <p class="uk-margin-medium-bottom">Access hundreds of networks through a single port. Join the ecosystem today.</p>
+                <a href="/meeting" class="uk-button tc-btn-white">Join IXP</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<app-footer></app-footer>

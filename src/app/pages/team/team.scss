@@ -1,0 +1,204 @@
+.tc-team-page {
+    background: var(--bg-shell);
+    min-height: 100vh;
+
+    .tc-page-header {
+        background: linear-gradient(135deg, var(--bg-deep) 0%, var(--bg-shell) 100%);
+        padding-top: 160px;
+        
+        .tc-badge {
+            display: inline-block;
+            background: var(--teal-dim);
+            color: var(--teal);
+            padding: 6px 16px;
+            border-radius: 100px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 24px;
+        }
+
+        .tc-page-title {
+            font-family: var(--font-display);
+            font-weight: 800;
+            font-size: 3.5rem;
+            color: var(--text-hi);
+            margin-bottom: 24px;
+
+            .highlight {
+                color: var(--blue);
+            }
+        }
+
+        .tc-page-lead {
+            font-size: 1.25rem;
+            color: var(--text-mid);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+    }
+
+    .tc-team-card {
+        background: var(--bg-panel);
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        border: 1px solid var(--border-lo);
+        height: 100%;
+
+        &:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+            border-color: var(--blue);
+
+            .tc-member-overlay {
+                opacity: 1;
+            }
+
+            .tc-social-links {
+                transform: translateY(0);
+            }
+        }
+
+        .tc-member-image {
+            position: relative;
+            height: 300px;
+            background: #1a2a3a;
+            
+            .tc-image-placeholder {
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: rgba(255, 255, 255, 0.1);
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .tc-member-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 98, 224, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        .tc-social-links {
+            display: flex;
+            gap: 16px;
+            transform: translateY(20px);
+            transition: all 0.4s ease;
+
+            a {
+                color: white;
+                background: rgba(255, 255, 255, 0.2);
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    background: white;
+                    color: var(--blue);
+                    transform: scale(1.1);
+                }
+            }
+        }
+
+        .tc-member-info {
+            padding: 30px;
+            text-align: center;
+
+            .tc-member-name {
+                font-family: var(--font-display);
+                font-weight: 700;
+                font-size: 1.4rem;
+                color: var(--text-hi);
+                margin-bottom: 4px;
+            }
+
+            .tc-member-role {
+                color: var(--blue);
+                font-weight: 700;
+                font-size: 0.9rem;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+                margin-bottom: 16px;
+            }
+
+            .tc-member-desc {
+                font-size: 0.95rem;
+                color: var(--text-mid);
+                line-height: 1.5;
+            }
+        }
+    }
+
+    .tc-culture-section {
+        background: var(--bg-deep);
+        border-top: 1px solid var(--border-lo);
+        
+        .tc-section-title {
+            font-family: var(--font-display);
+            font-weight: 800;
+            font-size: 2.5rem;
+            color: var(--text-hi);
+            margin-bottom: 24px;
+        }
+
+        .tc-section-text {
+            font-size: 1.1rem;
+            color: var(--text-mid);
+            margin-bottom: 30px;
+            line-height: 1.7;
+        }
+
+        .tc-value-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            li {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                margin-bottom: 16px;
+                color: var(--text-hi);
+                font-weight: 600;
+
+                span {
+                    color: var(--teal);
+                    background: var(--teal-dim);
+                    padding: 4px;
+                    border-radius: 4px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 960px) {
+    .tc-team-page {
+        .tc-page-header {
+            .tc-page-title {
+                font-size: 2.5rem;
+            }
+        }
+    }
+}

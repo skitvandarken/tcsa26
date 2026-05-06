@@ -1,0 +1,54 @@
+<app-navbar></app-navbar>
+
+<main class="tc-service-page">
+    <section class="tc-service-hero uk-section uk-section-xlarge">
+        <div class="uk-container">
+            <div class="uk-grid-large uk-flex-middle" uk-grid>
+                <div class="uk-width-1-2@m">
+                    <div class="tc-service-content" uk-scrollspy="cls: uk-animation-slide-left-small">
+                        <span class="tc-badge">Infrastructure</span>
+                        <h1 class="tc-page-title">Digital <br> <span class="highlight">Foundations</span></h1>
+                        <p class="tc-page-lead">
+                            A robust ecosystem of PoPs, IXPs, and peering agreements designed for maximum performance and reliability.
+                        </p>
+                        <div class="uk-margin-large-top">
+                            <a href="/meeting" class="uk-button tc-btn-primary">Explore our PoPs</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="uk-width-1-2@m">
+                    <div class="tc-service-image uk-border-rounded-large uk-overflow-hidden uk-box-shadow-xlarge">
+                        <img src="GlobalPresence.png" alt="Infrastructure Overview">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="uk-section">
+        <div class="uk-container">
+            <div class="uk-grid-large uk-child-width-1-3@m" uk-grid>
+                @for (item of items; track item.title) {
+                <div>
+                    <div class="tc-feature-card uk-text-center">
+                        <h2 style="font-size: 3.5rem; font-weight: 800; color: var(--blue);">{{ item.count }}</h2>
+                        <h3>{{ item.title }}</h3>
+                        <p>{{ item.desc }}</p>
+                    </div>
+                </div>
+                }
+            </div>
+        </div>
+    </section>
+
+    <section class="uk-section uk-section-muted">
+        <div class="uk-container uk-container-small uk-text-center">
+            <h2 class="tc-section-title">Peering Strategy</h2>
+            <p class="tc-section-text">
+                Our open peering policy allows us to interconnect with thousands of networks, reducing the distance between users and content. This results in faster page loads, better video quality, and superior gaming experiences.
+            </p>
+        </div>
+    </section>
+</main>
+
+<app-footer></app-footer>

@@ -1,0 +1,93 @@
+<app-navbar></app-navbar>
+
+<main class="tc-meeting-page">
+    <section class="tc-meeting-hero uk-section uk-section-large">
+        <div class="uk-container">
+            <div class="uk-grid-large uk-flex-middle" uk-grid>
+                <div class="uk-width-1-2@m">
+                    <div class="tc-meeting-content" uk-scrollspy="cls: uk-animation-slide-left-small">
+                        <span class="tc-badge">Collaboration</span>
+                        <h1 class="tc-page-title">Request a <span class="highlight">Meeting</span></h1>
+                        <p class="tc-page-lead">
+                            Ready to take your network to the next level? Schedule a consultation with our experts to discuss custom ICT solutions for your enterprise.
+                        </p>
+                        
+                        <div class="tc-contact-info uk-margin-large-top">
+                            <div class="info-item">
+                                <span uk-icon="icon: receiver; ratio: 1.2"></span>
+                                <div>
+                                    <h4>Call Us</h4>
+                                    <p>+27 11 000 0000</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <span uk-icon="icon: mail; ratio: 1.2"></span>
+                                <div>
+                                    <h4>Email</h4>
+                                    <p>info@telcables.co.za</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <span uk-icon="icon: location; ratio: 1.2"></span>
+                                <div>
+                                    <h4>Office</h4>
+                                    <p>Johannesburg, South Africa</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="uk-width-1-2@m">
+                    <div class="tc-form-card uk-card uk-card-default uk-card-body uk-border-rounded-large" uk-scrollspy="cls: uk-animation-slide-right-small; delay: 200">
+                        <form (ngSubmit)="onSubmit()" #meetingForm="ngForm">
+                            <div class="uk-margin">
+                                <label class="uk-form-label">Full Name</label>
+                                <div class="uk-form-controls">
+                                    <input class="uk-input tc-input" type="text" name="name" [(ngModel)]="formData.name" placeholder="Enter your name" required>
+                                </div>
+                            </div>
+
+                            <div class="uk-grid-small uk-child-width-1-2@s" uk-grid>
+                                <div>
+                                    <label class="uk-form-label">Email Address</label>
+                                    <input class="uk-input tc-input" type="email" name="email" [(ngModel)]="formData.email" placeholder="email@company.com" required>
+                                </div>
+                                <div>
+                                    <label class="uk-form-label">Company</label>
+                                    <input class="uk-input tc-input" type="text" name="company" [(ngModel)]="formData.company" placeholder="Your company name">
+                                </div>
+                            </div>
+
+                            <div class="uk-grid-small uk-child-width-1-2@s uk-margin" uk-grid>
+                                <div>
+                                    <label class="uk-form-label">Area of Interest</label>
+                                    <select class="uk-select tc-input" name="interest" [(ngModel)]="formData.interest">
+                                        @for (item of interests; track item) {
+                                            <option [value]="item">{{ item }}</option>
+                                        }
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="uk-form-label">Preferred Date</label>
+                                    <input class="uk-input tc-input" type="date" name="date" [(ngModel)]="formData.date">
+                                </div>
+                            </div>
+
+                            <div class="uk-margin">
+                                <label class="uk-form-label">Message / Requirements</label>
+                                <textarea class="uk-textarea tc-input" rows="4" name="message" [(ngModel)]="formData.message" placeholder="How can we help you?"></textarea>
+                            </div>
+
+                            <div class="uk-margin-top">
+                                <button type="submit" class="uk-button tc-btn-submit uk-width-1-1" [disabled]="!meetingForm.form.valid">Send Request</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<app-footer></app-footer>

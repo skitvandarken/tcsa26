@@ -1,0 +1,44 @@
+<app-navbar></app-navbar>
+
+<main class="tc-service-page">
+    <section class="tc-service-hero uk-section uk-section-xlarge">
+        <div class="uk-container">
+            <div class="uk-grid-large uk-flex-middle" uk-grid>
+                <div class="uk-width-1-2@m">
+                    <div class="tc-service-content" uk-scrollspy="cls: uk-animation-slide-left-small">
+                        <span class="tc-badge">Assets</span>
+                        <h1 class="tc-page-title">On-net <br> <span class="highlight">Infrastructure</span></h1>
+                        <p class="tc-page-lead">
+                            Full control over our physical assets ensures the highest levels of service availability and network security.
+                        </p>
+                    </div>
+                </div>
+                <div class="uk-width-1-2@m">
+                    <div class="tc-service-image uk-border-rounded-large uk-overflow-hidden uk-box-shadow-xlarge">
+                        <img src="GlobalPresence.png" alt="On-net Assets">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="uk-section">
+        <div class="uk-container">
+            <div class="uk-grid-medium uk-child-width-1-2@s uk-child-width-1-4@m" uk-grid>
+                @for (asset of assets; track asset.title) {
+                <div>
+                    <div class="tc-feature-card">
+                        <div class="tc-icon-box">
+                            <span uk-icon="icon: world; ratio: 1.2"></span>
+                        </div>
+                        <h3>{{ asset.title }}</h3>
+                        <p>{{ asset.desc }}</p>
+                    </div>
+                </div>
+                }
+            </div>
+        </div>
+    </section>
+</main>
+
+<app-footer></app-footer>

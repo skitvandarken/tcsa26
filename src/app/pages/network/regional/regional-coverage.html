@@ -1,0 +1,50 @@
+<app-navbar></app-navbar>
+
+<main class="tc-service-page">
+    <section class="tc-service-hero uk-section uk-section-xlarge">
+        <div class="uk-container">
+            <div class="uk-grid-large uk-flex-middle" uk-grid>
+                <div class="uk-width-1-2@m">
+                    <div class="tc-service-content" uk-scrollspy="cls: uk-animation-slide-left-small">
+                        <span class="tc-badge">Regional</span>
+                        <h1 class="tc-page-title">South Africa <br> <span class="highlight">Network</span></h1>
+                        <p class="tc-page-lead">
+                            Extensive national footprint connecting major economic hubs to our global high-speed backbone.
+                        </p>
+                        <div class="uk-margin-large-top">
+                            <a href="/meeting" class="uk-button tc-btn-primary">View Local Map</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="uk-width-1-2@m">
+                    <div class="tc-service-image uk-border-rounded-large uk-overflow-hidden uk-box-shadow-xlarge">
+                        <img src="telcablessa.png" alt="South Africa Network Map">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="uk-section">
+        <div class="uk-container">
+            <div class="uk-text-center uk-margin-large-bottom">
+                <h2 class="tc-section-title">Key Economic Hubs</h2>
+            </div>
+            <div class="uk-grid-medium uk-child-width-1-3@m" uk-grid>
+                @for (hub of hubs; track hub.city) {
+                <div>
+                    <div class="tc-feature-card">
+                        <div class="tc-icon-box">
+                            <span uk-icon="icon: location; ratio: 1.2"></span>
+                        </div>
+                        <h3>{{ hub.city }}</h3>
+                        <p>{{ hub.desc }}</p>
+                    </div>
+                </div>
+                }
+            </div>
+        </div>
+    </section>
+</main>
+
+<app-footer></app-footer>

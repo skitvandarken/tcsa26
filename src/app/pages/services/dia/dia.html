@@ -1,0 +1,97 @@
+<app-navbar></app-navbar>
+
+<main class="tc-service-page">
+    <!-- Hero Section -->
+    <section class="tc-service-hero uk-section uk-section-xlarge">
+        <div class="uk-container">
+            <div class="uk-grid-large uk-flex-middle" uk-grid>
+                <div class="uk-width-1-2@m">
+                    <div class="tc-service-content" uk-scrollspy="cls: uk-animation-slide-left-small">
+                        <span class="tc-badge">Connectivity</span>
+                        <h1 class="tc-page-title">Dedicated Internet <br> <span class="highlight">Access (DIA)</span></h1>
+                        <p class="tc-page-lead">
+                            Enterprise-grade connectivity with guaranteed bandwidth and symmetrical speeds for businesses that demand the highest levels of reliability.
+                        </p>
+                        <div class="uk-margin-large-top">
+                            <a href="/meeting" class="uk-button tc-btn-primary">Request a Quote</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="uk-width-1-2@m">
+                    <div class="tc-service-image uk-border-rounded-large uk-overflow-hidden uk-box-shadow-xlarge">
+                        <img src="GlobalPresence.png" alt="DIA Connectivity">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section id="overview" class="uk-section tc-overview-section">
+        <div class="uk-container uk-container-small uk-text-center">
+            <h2 class="tc-section-title">Overview</h2>
+            <p class="tc-section-text">
+                Our DIA service provides a dedicated connection between your premises and our global high-speed backbone. Unlike shared broadband, DIA offers fixed bandwidth that is exclusively yours, ensuring consistent performance even during peak hours.
+            </p>
+        </div>
+    </section>
+
+    <!-- Solutions Section -->
+    <section id="solutions" class="uk-section uk-section-muted">
+        <div class="uk-container">
+            <div class="uk-grid-large uk-child-width-1-2@m" uk-grid>
+                <div>
+                    <h2 class="tc-section-title">Solutions</h2>
+                    <p class="tc-section-text">
+                        Whether you are a growing enterprise or a multinational corporation, we tailor our DIA solutions to match your specific operational requirements and budget.
+                    </p>
+                </div>
+                <div>
+                    <div class="tc-solution-card uk-card uk-card-default uk-card-body uk-border-rounded-medium">
+                        <ul class="uk-list uk-list-bullet">
+                            <li>Fiber-to-the-Business (FTTB)</li>
+                            <li>Wireless Radio Links (Backup)</li>
+                            <li>Multi-homed BGP configurations</li>
+                            <li>Managed Router Services</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features & Benefits -->
+    <section id="features" class="uk-section">
+        <div class="uk-container">
+            <div class="uk-text-center uk-margin-large-bottom">
+                <h2 class="tc-section-title">Features & Benefits</h2>
+            </div>
+            <div class="uk-grid-medium uk-child-width-1-2@s uk-child-width-1-4@m" uk-grid>
+                @for (feature of features; track feature.title) {
+                <div>
+                    <div class="tc-feature-card">
+                        <div class="tc-icon-box">
+                            <span uk-icon="icon: check; ratio: 1.2"></span>
+                        </div>
+                        <h3>{{ feature.title }}</h3>
+                        <p>{{ feature.desc }}</p>
+                    </div>
+                </div>
+                }
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="uk-section tc-cta-section uk-text-center">
+        <div class="uk-container">
+            <div class="tc-cta-card uk-padding-large uk-border-rounded-large">
+                <h2 class="uk-margin-small-bottom">Ready to Upgrade Your Connection?</h2>
+                <p class="uk-margin-medium-bottom">Contact our sales team today for a custom DIA proposal.</p>
+                <a href="/meeting" class="uk-button tc-btn-white">Contact Us Now</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<app-footer></app-footer>

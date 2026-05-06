@@ -1,0 +1,44 @@
+<app-navbar></app-navbar>
+
+<main class="tc-service-page">
+    <section class="tc-service-hero uk-section uk-section-xlarge">
+        <div class="uk-container">
+            <div class="uk-grid-large uk-flex-middle" uk-grid>
+                <div class="uk-width-1-2@m">
+                    <div class="tc-service-content" uk-scrollspy="cls: uk-animation-slide-left-small">
+                        <span class="tc-badge">Strategy</span>
+                        <h1 class="tc-page-title">Peering <br> <span class="highlight">Agreements</span></h1>
+                        <p class="tc-page-lead">
+                            Leveraging thousands of direct interconnections to deliver a superior internet experience for our customers.
+                        </p>
+                    </div>
+                </div>
+                <div class="uk-width-1-2@m">
+                    <div class="tc-service-image uk-border-rounded-large uk-overflow-hidden uk-box-shadow-xlarge">
+                        <img src="GlobalPresence.png" alt="Peering Strategy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="uk-section">
+        <div class="uk-container">
+            <div class="uk-grid-medium uk-child-width-1-2@s uk-child-width-1-4@m" uk-grid>
+                @for (item of details; track item.title) {
+                <div>
+                    <div class="tc-feature-card">
+                        <div class="tc-icon-box">
+                            <span uk-icon="icon: users; ratio: 1.2"></span>
+                        </div>
+                        <h3>{{ item.title }}</h3>
+                        <p>{{ item.desc }}</p>
+                    </div>
+                </div>
+                }
+            </div>
+        </div>
+    </section>
+</main>
+
+<app-footer></app-footer>

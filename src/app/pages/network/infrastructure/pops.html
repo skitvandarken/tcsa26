@@ -1,0 +1,45 @@
+<app-navbar></app-navbar>
+
+<main class="tc-service-page">
+    <section class="tc-service-hero uk-section uk-section-xlarge">
+        <div class="uk-container">
+            <div class="uk-grid-large uk-flex-middle" uk-grid>
+                <div class="uk-width-1-2@m">
+                    <div class="tc-service-content" uk-scrollspy="cls: uk-animation-slide-left-small">
+                        <span class="tc-badge">Infrastructure</span>
+                        <h1 class="tc-page-title">Points of <br> <span class="highlight">Presence (PoPs)</span></h1>
+                        <p class="tc-page-lead">
+                            Strategically located PoPs in major global digital hubs to bring our services closer to your users.
+                        </p>
+                    </div>
+                </div>
+                <div class="uk-width-1-2@m">
+                    <div class="tc-service-image uk-border-rounded-large uk-overflow-hidden uk-box-shadow-xlarge">
+                        <img src="GlobalPresence.png" alt="Global PoPs">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="uk-section">
+        <div class="uk-container">
+            <div class="uk-grid-medium uk-child-width-1-2@s uk-child-width-1-4@m" uk-grid>
+                @for (region of regions; track region.name) {
+                <div>
+                    <div class="tc-feature-card">
+                        <div class="tc-icon-box">
+                            <span uk-icon="icon: location; ratio: 1.2"></span>
+                        </div>
+                        <h3>{{ region.name }}</h3>
+                        <h2 style="color: var(--blue); font-weight: 800;">{{ region.count }} PoPs</h2>
+                        <p>{{ region.locations }}</p>
+                    </div>
+                </div>
+                }
+            </div>
+        </div>
+    </section>
+</main>
+
+<app-footer></app-footer>

@@ -1,0 +1,92 @@
+<app-navbar></app-navbar>
+
+<main class="tc-service-page">
+    <section class="tc-service-hero uk-section uk-section-xlarge">
+        <div class="uk-container">
+            <div class="uk-grid-large uk-flex-middle" uk-grid>
+                <div class="uk-width-1-2@m">
+                    <div class="tc-service-content" uk-scrollspy="cls: uk-animation-slide-left-small">
+                        <span class="tc-badge">Connectivity</span>
+                        <h1 class="tc-page-title">Global IP <br> <span class="highlight">Transit</span></h1>
+                        <p class="tc-page-lead">
+                            High-capacity, low-latency internet connectivity leveraging the Angola Cables global backbone and extensive peering ecosystem.
+                        </p>
+                        <div class="uk-margin-large-top">
+                            <a href="/meeting" class="uk-button tc-btn-primary">Connect Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="uk-width-1-2@m">
+                    <div class="tc-service-image uk-border-rounded-large uk-overflow-hidden uk-box-shadow-xlarge">
+                        <img src="GlobalPresence.png" alt="IP Transit">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="overview" class="uk-section tc-overview-section">
+        <div class="uk-container uk-container-small uk-text-center">
+            <h2 class="tc-section-title">Overview</h2>
+            <p class="tc-section-text">
+                IP Transit is a professional service where an ISP provides a path through its own network and the networks of other ISPs to every location on the Internet. We offer superior performance through our unique South Atlantic route.
+            </p>
+        </div>
+    </section>
+
+    <section id="solutions" class="uk-section uk-section-muted">
+        <div class="uk-container">
+            <div class="uk-grid-large uk-child-width-1-2@m" uk-grid>
+                <div>
+                    <h2 class="tc-section-title">Solutions</h2>
+                    <p class="tc-section-text">
+                        Our IP Transit solution is designed for ISPs, content providers, and enterprises that require a robust and reliable gateway to the global internet.
+                    </p>
+                </div>
+                <div>
+                    <div class="tc-solution-card uk-card uk-card-default uk-card-body uk-border-rounded-medium">
+                        <ul class="uk-list uk-list-bullet">
+                            <li>1Gbps to 100Gbps ports</li>
+                            <li>BGP full table or partial routes</li>
+                            <li>Aggregated billing options</li>
+                            <li>Real-time traffic monitoring</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="uk-section">
+        <div class="uk-container">
+            <div class="uk-text-center uk-margin-large-bottom">
+                <h2 class="tc-section-title">Features & Benefits</h2>
+            </div>
+            <div class="uk-grid-medium uk-child-width-1-2@s uk-child-width-1-4@m" uk-grid>
+                @for (feature of features; track feature.title) {
+                <div>
+                    <div class="tc-feature-card">
+                        <div class="tc-icon-box">
+                            <span uk-icon="icon: world; ratio: 1.2"></span>
+                        </div>
+                        <h3>{{ feature.title }}</h3>
+                        <p>{{ feature.desc }}</p>
+                    </div>
+                </div>
+                }
+            </div>
+        </div>
+    </section>
+
+    <section class="uk-section tc-cta-section uk-text-center">
+        <div class="uk-container">
+            <div class="tc-cta-card uk-padding-large uk-border-rounded-large">
+                <h2 class="uk-margin-small-bottom">Optimize Your Global Traffic</h2>
+                <p class="uk-margin-medium-bottom">Speak with our engineers to design the perfect transit solution.</p>
+                <a href="/meeting" class="uk-button tc-btn-white">Request Consultation</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<app-footer></app-footer>

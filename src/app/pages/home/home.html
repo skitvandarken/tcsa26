@@ -2,45 +2,48 @@
 <app-hero></app-hero>
 <app-services></app-services>
 
-<div class="uk-container  uk-margin-medium-bottom uk-large-top">
-    <h1 class="uk-heading-large uk-text-left ">Large</h1>
-</div>
+<div class="uk-section tc-faq-section">
+    <div class="uk-container">
+        <div class="uk-grid-large" uk-grid>
+            <div class="uk-width-2-3@m">
+                <div class="tc-section-header uk-margin-medium-bottom">
+                    <h2 class="tc-section-title">Frequently Asked Questions</h2>
+                    <p class="tc-section-subtitle">Find answers to common questions about our network and services.</p>
+                </div>
 
-<div class="uk-container ">
-    <div class="uk-child-width-expand@s uk-text-center  " uk-grid>
-        <div>
-            <div class="uk-card  uk-card-body">
-                <ul class="uk-accordion-default" uk-accordion="multiple: true">
+                <ul class="uk-accordion tc-accordion" uk-accordion="multiple: true">
                     <li class="uk-open">
-                        <a class="uk-accordion-title" href>Item 1 <span uk-accordion-icon></span></a>
+                        <a class="uk-accordion-title" href>How do I connect to the South Africa network?</a>
                         <div class="uk-accordion-content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut
-                                labore et dolore magna aliqua.</p>
+                            <p>You can connect through our various Points of Presence (PoPs) located in major data
+                                centers across Johannesburg, Cape Town, and Durban. Contact our sales team for a custom
+                                solution.</p>
                         </div>
                     </li>
                     <li>
-                        <a class="uk-accordion-title" href>Item 2 <span uk-accordion-icon> </span> </a>
+                        <a class="uk-accordion-title" href>What is the latency between London and South Africa?</a>
                         <div class="uk-accordion-content">
-                            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                commodo consequat. Duis aute irure dolor reprehenderit.</p>
+                            <p>Our network utilizes the most direct submarine cable routes, providing industry-leading
+                                latency of approximately 140ms between London and Cape Town.</p>
                         </div>
                     </li>
                     <li>
-                        <a class="uk-accordion-title" href>Item 3 <span uk-accordion-icon> </span></a>
+                        <a class="uk-accordion-title" href>Do you provide 24/7 technical support?</a>
                         <div class="uk-accordion-content">
-                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                                nulla
-                                pariatur. Excepteur sint occaecat cupidatat proident.</p>
+                            <p>Yes, we operate a 24/7 Network Operations Center (NOC) that monitors our global
+                                infrastructure and provides immediate assistance to our partners and customers.</p>
                         </div>
                     </li>
                 </ul>
             </div>
+            <div class="uk-width-1-3@m">
+                <div class="uk-card tc-contact-card">
+                    <h3 class="uk-card-title">Need custom solutions?</h3>
+                    <p>Our experts are ready to help you design the perfect network architecture for your needs.</p>
+                    <a href="#" class="uk-button tc-btn-primary uk-width-1-1">Talk to an Expert</a>
+                </div>
+            </div>
         </div>
-        <div>
-            <div class="uk-card uk-card-default uk-card-body">Item</div>
-        </div>
-
     </div>
-
 </div>
+<app-footer></app-footer>

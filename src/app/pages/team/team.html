@@ -1,0 +1,67 @@
+<app-navbar></app-navbar>
+
+<main class="tc-team-page">
+    <!-- Header Section -->
+    <section class="tc-page-header uk-section uk-section-large">
+        <div class="uk-container uk-text-center">
+            <span class="tc-badge" uk-scrollspy="cls: uk-animation-slide-top-small">Who We Are</span>
+            <h1 class="tc-page-title" uk-scrollspy="cls: uk-animation-slide-bottom-small; delay: 100">Our <span class="highlight">TCSA</span> Team</h1>
+            <p class="tc-page-lead" uk-scrollspy="cls: uk-animation-fade; delay: 200">
+                A dedicated and experienced team assisting in developing and deploying the right ICT solutions for your enterprise.
+            </p>
+        </div>
+    </section>
+
+    <!-- Team Grid -->
+    <section class="uk-section uk-padding-remove-top uk-margin-large-bottom">
+        <div class="uk-container">
+            <div class="uk-grid-large uk-child-width-1-2@s uk-child-width-1-4@m" uk-grid uk-scrollspy="cls: uk-animation-slide-bottom-medium; target: .tc-team-card; delay: 100">
+                @for (member of teamMembers; track $index) {
+                <div>
+                    <div class="tc-team-card">
+                        <div class="tc-member-image">
+                            <!-- In a real app, these images would exist. Using placeholders for now -->
+                            <div class="tc-image-placeholder">
+                                <span uk-icon="icon: user; ratio: 3"></span>
+                            </div>
+                            <div class="tc-member-overlay">
+                                <div class="tc-social-links">
+                                    <a href="#" uk-icon="linkedin"></a>
+                                    <a href="#" uk-icon="mail"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tc-member-info">
+                            <h3 class="tc-member-name">{{ member.name }}</h3>
+                            <p class="tc-member-role">{{ member.role }}</p>
+                            <p class="tc-member-desc">{{ member.desc }}</p>
+                        </div>
+                    </div>
+                </div>
+                }
+            </div>
+        </div>
+    </section>
+
+    <!-- Culture Section -->
+    <section class="uk-section tc-culture-section">
+        <div class="uk-container">
+            <div class="uk-grid-large uk-flex-middle" uk-grid>
+                <div class="uk-width-1-2@m">
+                    <h2 class="tc-section-title">Driven by Innovation</h2>
+                    <p class="tc-section-text">
+                        Our flexible and innovative solutions from security to Cloud Services or simply IP Transit to data storage, we provide the best solution that is adaptable to your budget and resource requirements.
+                    </p>
+                    <ul class="tc-value-list">
+                        <li><span uk-icon="check"></span> Expert Consultation</li>
+                        <li><span uk-icon="check"></span> Global Network Reach</li>
+                        <li><span uk-icon="check"></span> 24/7 Dedicated Support</li>
+                    </ul>
+                </div>
+              
+            </div>
+        </div>
+    </section>
+</main>
+
+<app-footer></app-footer>

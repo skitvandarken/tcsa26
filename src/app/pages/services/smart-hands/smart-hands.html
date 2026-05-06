@@ -1,0 +1,69 @@
+<app-navbar></app-navbar>
+
+<main class="tc-service-page">
+    <section class="tc-service-hero uk-section uk-section-xlarge">
+        <div class="uk-container">
+            <div class="uk-grid-large uk-flex-middle" uk-grid>
+                <div class="uk-width-1-2@m">
+                    <div class="tc-service-content" uk-scrollspy="cls: uk-animation-slide-left-small">
+                        <span class="tc-badge">Data Center Support</span>
+                        <h1 class="tc-page-title">Smart <br> <span class="highlight">Hands</span></h1>
+                        <p class="tc-page-lead">
+                            Onsite technical assistance whenever you need it. Our experienced technicians act as your "hands on the ground" in our data center.
+                        </p>
+                        <div class="uk-margin-large-top">
+                            <a href="/meeting" class="uk-button tc-btn-primary">Book Support</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="uk-width-1-2@m">
+                    <div class="tc-service-image uk-border-rounded-large uk-overflow-hidden uk-box-shadow-xlarge">
+                        <img src="GlobalPresence.png" alt="Smart Hands Support">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="overview" class="uk-section tc-overview-section">
+        <div class="uk-container uk-container-small uk-text-center">
+            <h2 class="tc-section-title">Overview</h2>
+            <p class="tc-section-text">
+                Smart Hands provides you with access to our onsite technical team for tasks that require physical interaction with your equipment. This reduces the need for you to send your own staff to the data center, saving time and travel costs.
+            </p>
+        </div>
+    </section>
+
+    <section id="features" class="uk-section">
+        <div class="uk-container">
+            <div class="uk-text-center uk-margin-large-bottom">
+                <h2 class="tc-section-title">Features & Benefits</h2>
+            </div>
+            <div class="uk-grid-medium uk-child-width-1-2@s uk-child-width-1-4@m" uk-grid>
+                @for (feature of features; track feature.title) {
+                <div>
+                    <div class="tc-feature-card">
+                        <div class="tc-icon-box">
+                            <span uk-icon="icon: push; ratio: 1.2"></span>
+                        </div>
+                        <h3>{{ feature.title }}</h3>
+                        <p>{{ feature.desc }}</p>
+                    </div>
+                </div>
+                }
+            </div>
+        </div>
+    </section>
+
+    <section class="uk-section tc-cta-section uk-text-center">
+        <div class="uk-container">
+            <div class="tc-cta-card uk-padding-large uk-border-rounded-large">
+                <h2 class="uk-margin-small-bottom">Need Onsite Assistance?</h2>
+                <p class="uk-margin-medium-bottom">Our Smart Hands team is available 24/7 to support your infrastructure.</p>
+                <a href="/meeting" class="uk-button tc-btn-white">Open Ticket</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<app-footer></app-footer>

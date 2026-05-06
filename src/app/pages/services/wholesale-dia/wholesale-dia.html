@@ -1,0 +1,69 @@
+<app-navbar></app-navbar>
+
+<main class="tc-service-page">
+    <section class="tc-service-hero uk-section uk-section-xlarge">
+        <div class="uk-container">
+            <div class="uk-grid-large uk-flex-middle" uk-grid>
+                <div class="uk-width-1-2@m">
+                    <div class="tc-service-content" uk-scrollspy="cls: uk-animation-slide-left-small">
+                        <span class="tc-badge">Wholesale Connectivity</span>
+                        <h1 class="tc-page-title">Wholesale <br> <span class="highlight">DIA</span></h1>
+                        <p class="tc-page-lead">
+                            High-capacity Dedicated Internet Access tailored for ISPs and telecommunication carriers requiring global reach.
+                        </p>
+                        <div class="uk-margin-large-top">
+                            <a href="/meeting" class="uk-button tc-btn-primary">Request a Quote</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="uk-width-1-2@m">
+                    <div class="tc-service-image uk-border-rounded-large uk-overflow-hidden uk-box-shadow-xlarge">
+                        <img src="GlobalPresence.png" alt="Wholesale DIA">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="overview" class="uk-section tc-overview-section">
+        <div class="uk-container uk-container-small uk-text-center">
+            <h2 class="tc-section-title">Overview</h2>
+            <p class="tc-section-text">
+                Our Wholesale DIA service provides carriers with a reliable, high-performance link to the global internet. We offer flexible capacity options and robust SLAs to ensure your customers stay connected.
+            </p>
+        </div>
+    </section>
+
+    <section id="features" class="uk-section">
+        <div class="uk-container">
+            <div class="uk-text-center uk-margin-large-bottom">
+                <h2 class="tc-section-title">Features & Benefits</h2>
+            </div>
+            <div class="uk-grid-medium uk-child-width-1-2@s uk-child-width-1-4@m" uk-grid>
+                @for (feature of features; track feature.title) {
+                <div>
+                    <div class="tc-feature-card">
+                        <div class="tc-icon-box">
+                            <span uk-icon="icon: cloud-upload; ratio: 1.2"></span>
+                        </div>
+                        <h3>{{ feature.title }}</h3>
+                        <p>{{ feature.desc }}</p>
+                    </div>
+                </div>
+                }
+            </div>
+        </div>
+    </section>
+
+    <section class="uk-section tc-cta-section uk-text-center">
+        <div class="uk-container">
+            <div class="tc-cta-card uk-padding-large uk-border-rounded-large">
+                <h2 class="uk-margin-small-bottom">Ready to Scale Your Network?</h2>
+                <p class="uk-margin-medium-bottom">Contact our wholesale division for enterprise-grade internet solutions.</p>
+                <a href="/meeting" class="uk-button tc-btn-white">Contact Us</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<app-footer></app-footer>

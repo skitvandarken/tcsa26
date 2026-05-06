@@ -1,0 +1,53 @@
+<app-navbar></app-navbar>
+
+<main class="tc-service-page">
+    <section class="tc-service-hero uk-section uk-section-xlarge">
+        <div class="uk-container">
+            <div class="uk-grid-large uk-flex-middle" uk-grid>
+                <div class="uk-width-1-2@m">
+                    <div class="tc-service-content" uk-scrollspy="cls: uk-animation-slide-left-small">
+                        <span class="tc-badge">Industry Leaders</span>
+                        <h1 class="tc-page-title">Rankings & <br> <span class="highlight">Certifications</span></h1>
+                        <p class="tc-page-lead">
+                            Our commitment to excellence is reflected in our global rankings and adherence to international industry standards.
+                        </p>
+                    </div>
+                </div>
+                <div class="uk-width-1-2@m">
+                    <div class="tc-service-image uk-border-rounded-large uk-overflow-hidden uk-box-shadow-xlarge">
+                        <img src="GlobalPresence.png" alt="Certifications and Rankings">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="uk-section">
+        <div class="uk-container">
+            <div class="uk-grid-large uk-child-width-1-3@m" uk-grid>
+                @for (award of awards; track award.title) {
+                <div>
+                    <div class="tc-feature-card uk-text-center">
+                        <div class="tc-icon-box uk-margin-auto">
+                            <span uk-icon="icon: bookmark; ratio: 1.2"></span>
+                        </div>
+                        <h3>{{ award.title }}</h3>
+                        <p>{{ award.desc }}</p>
+                    </div>
+                </div>
+                }
+            </div>
+        </div>
+    </section>
+
+    <section class="uk-section uk-section-muted">
+        <div class="uk-container uk-container-small uk-text-center">
+            <h2 class="tc-section-title">CAIDA Ranking Excellence</h2>
+            <p class="tc-section-text">
+                As part of the Angola Cables group, we are proud to be consistently ranked among the best-connected networks in Africa. The CAIDA (Center for Applied Internet Data Analysis) ranking validates our strategic peering and transit strategy, placing AS 37169 at the heart of global internet traffic.
+            </p>
+        </div>
+    </section>
+</main>
+
+<app-footer></app-footer>

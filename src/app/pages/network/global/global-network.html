@@ -1,0 +1,78 @@
+<app-navbar></app-navbar>
+
+<main class="tc-service-page">
+    <!-- Hero Section -->
+    <section class="tc-service-hero uk-section uk-section-xlarge">
+        <div class="uk-container">
+            <div class="uk-grid-large uk-flex-middle" uk-grid>
+                <div class="uk-width-1-2@m">
+                    <div class="tc-service-content" uk-scrollspy="cls: uk-animation-slide-left-small">
+                        <span class="tc-badge">Network</span>
+                        <h1 class="tc-page-title">Global <br> <span class="highlight">Connectivity</span></h1>
+                        <p class="tc-page-lead">
+                            Connecting Africa to the world through our unique, low-latency South Atlantic routes and extensive global infrastructure.
+                        </p>
+                        <div class="uk-margin-large-top">
+                            <a href="/meeting" class="uk-button tc-btn-primary">View Network Map</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="uk-width-1-2@m">
+                    <div class="tc-service-image uk-border-rounded-large uk-overflow-hidden uk-box-shadow-xlarge">
+                        <img src="telcablessa.png" alt="Global Network Map">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="uk-section uk-section-muted">
+        <div class="uk-container">
+            <div class="uk-grid-divider uk-child-width-1-4@m uk-text-center" uk-grid>
+                @for (stat of stats; track stat.label) {
+                <div>
+                    <h2 class="uk-margin-remove-bottom" style="font-size: 3rem; font-weight: 800; color: var(--blue);">{{ stat.value }}</h2>
+                    <p class="uk-text-meta uk-text-uppercase">{{ stat.label }}</p>
+                </div>
+                }
+            </div>
+        </div>
+    </section>
+
+    <!-- Submarine Cables Section -->
+    <section id="cables" class="uk-section">
+        <div class="uk-container">
+            <div class="uk-text-center uk-margin-large-bottom">
+                <h2 class="tc-section-title">Our Submarine Assets</h2>
+                <p class="tc-section-text">Proprietary and partnership-based cable systems ensuring high-availability routing.</p>
+            </div>
+            <div class="uk-grid-medium uk-child-width-1-2@s uk-child-width-1-4@m" uk-grid>
+                @for (cable of cables; track cable.name) {
+                <div>
+                    <div class="tc-feature-card">
+                        <div class="tc-icon-box">
+                            <span uk-icon="icon: link; ratio: 1.2"></span>
+                        </div>
+                        <h3>{{ cable.name }}</h3>
+                        <p>{{ cable.desc }}</p>
+                    </div>
+                </div>
+                }
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="uk-section tc-cta-section uk-text-center">
+        <div class="uk-container">
+            <div class="tc-cta-card uk-padding-large uk-border-rounded-large">
+                <h2 class="uk-margin-small-bottom">Experience the Latency Advantage</h2>
+                <p class="uk-margin-medium-bottom">Connect your enterprise to our global high-speed backbone today.</p>
+                <a href="/meeting" class="uk-button tc-btn-white">Request a Consultation</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<app-footer></app-footer>

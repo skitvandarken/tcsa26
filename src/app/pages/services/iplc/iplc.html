@@ -1,0 +1,92 @@
+<app-navbar></app-navbar>
+
+<main class="tc-service-page">
+    <section class="tc-service-hero uk-section uk-section-xlarge">
+        <div class="uk-container">
+            <div class="uk-grid-large uk-flex-middle" uk-grid>
+                <div class="uk-width-1-2@m">
+                    <div class="tc-service-content" uk-scrollspy="cls: uk-animation-slide-left-small">
+                        <span class="tc-badge">Wholesale</span>
+                        <h1 class="tc-page-title">International Private <br> <span class="highlight">Leased Circuit (IPLC)</span></h1>
+                        <p class="tc-page-lead">
+                            Secure, dedicated, and high-performance point-to-point connectivity for global carriers and service providers.
+                        </p>
+                        <div class="uk-margin-large-top">
+                            <a href="/meeting" class="uk-button tc-btn-primary">Request Capacity</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="uk-width-1-2@m">
+                    <div class="tc-service-image uk-border-rounded-large uk-overflow-hidden uk-box-shadow-xlarge">
+                        <img src="GlobalPresence.png" alt="IPLC Connectivity">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="overview" class="uk-section tc-overview-section">
+        <div class="uk-container uk-container-small uk-text-center">
+            <h2 class="tc-section-title">Overview</h2>
+            <p class="tc-section-text">
+                Our IPLC service offers a private, transparent, and secure point-to-point connection over our global submarine cable network. It is the ideal solution for carriers requiring high-capacity transport with guaranteed performance.
+            </p>
+        </div>
+    </section>
+
+    <section id="solutions" class="uk-section uk-section-muted">
+        <div class="uk-container">
+            <div class="uk-grid-large uk-child-width-1-2@m" uk-grid>
+                <div>
+                    <h2 class="tc-section-title">Wholesale Solutions</h2>
+                    <p class="tc-section-text">
+                        We offer a variety of transport options designed to meet the rigorous demands of the wholesale market, including diverse routing and flexible contract terms.
+                    </p>
+                </div>
+                <div>
+                    <div class="tc-solution-card uk-card uk-card-default uk-card-body uk-border-rounded-medium">
+                        <ul class="uk-list uk-list-bullet">
+                            <li>South Atlantic Cable System (SACS) routes</li>
+                            <li>WACS and Monet diverse paths</li>
+                            <li>Ethernet and OTN interfaces</li>
+                            <li>End-to-end SLA guarantees</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="uk-section">
+        <div class="uk-container">
+            <div class="uk-text-center uk-margin-large-bottom">
+                <h2 class="tc-section-title">Features & Benefits</h2>
+            </div>
+            <div class="uk-grid-medium uk-child-width-1-2@s uk-child-width-1-4@m" uk-grid>
+                @for (feature of features; track feature.title) {
+                <div>
+                    <div class="tc-feature-card">
+                        <div class="tc-icon-box">
+                            <span uk-icon="icon: link; ratio: 1.2"></span>
+                        </div>
+                        <h3>{{ feature.title }}</h3>
+                        <p>{{ feature.desc }}</p>
+                    </div>
+                </div>
+                }
+            </div>
+        </div>
+    </section>
+
+    <section class="uk-section tc-cta-section uk-text-center">
+        <div class="uk-container">
+            <div class="tc-cta-card uk-padding-large uk-border-rounded-large">
+                <h2 class="uk-margin-small-bottom">Globalize Your Infrastructure</h2>
+                <p class="uk-margin-medium-bottom">Contact our wholesale team for customized capacity solutions.</p>
+                <a href="/meeting" class="uk-button tc-btn-white">Request a Quote</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<app-footer></app-footer>

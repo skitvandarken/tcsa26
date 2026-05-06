@@ -1,0 +1,45 @@
+<app-navbar></app-navbar>
+
+<main class="tc-service-page">
+    <section class="tc-service-hero uk-section uk-section-xlarge">
+        <div class="uk-container">
+            <div class="uk-grid-large uk-flex-middle" uk-grid>
+                <div class="uk-width-1-2@m">
+                    <div class="tc-service-content" uk-scrollspy="cls: uk-animation-slide-left-small">
+                        <span class="tc-badge">Infrastructure</span>
+                        <h1 class="tc-page-title">Internet Exchange <br> <span class="highlight">Points (IXPs)</span></h1>
+                        <p class="tc-page-lead">
+                            Direct interconnection with the worlds most important IXPs to ensure the fastest paths for your digital traffic.
+                        </p>
+                    </div>
+                </div>
+                <div class="uk-width-1-2@m">
+                    <div class="tc-service-image uk-border-rounded-large uk-overflow-hidden uk-box-shadow-xlarge">
+                        <img src="GlobalPresence.png" alt="IXPs Connectivity">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="uk-section">
+        <div class="uk-container">
+            <div class="uk-grid-medium uk-child-width-1-2@s uk-child-width-1-4@m" uk-grid>
+                @for (ixp of exchanges; track ixp.name) {
+                <div>
+                    <div class="tc-feature-card">
+                        <div class="tc-icon-box">
+                            <span uk-icon="icon: push; ratio: 1.2"></span>
+                        </div>
+                        <h3>{{ ixp.name }}</h3>
+                        <p><strong>{{ ixp.location }}</strong></p>
+                        <p>{{ ixp.desc }}</p>
+                    </div>
+                </div>
+                }
+            </div>
+        </div>
+    </section>
+</main>
+
+<app-footer></app-footer>

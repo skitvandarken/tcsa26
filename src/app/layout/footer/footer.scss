@@ -1,0 +1,159 @@
+.tc-footer {
+    background: #0d121a; // Um azul marinho muito profundo quase preto
+    color: rgba(255, 255, 255, 0.7);
+    padding: 80px 0 40px;
+
+    .tc-logo {
+        .logo-text {
+            font-family: var(--font-display);
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: white;
+            letter-spacing: -0.5px;
+
+            .highlight {
+                color: var(--blue);
+            }
+        }
+    }
+
+    .footer-desc {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    .footer-title {
+        color: white;
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: 1.1rem;
+        margin-bottom: 24px;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 30px;
+            height: 2px;
+            background: var(--blue);
+        }
+    }
+
+    .footer-links {
+        li {
+            padding: 4px 0;
+            a {
+                color: rgba(255, 255, 255, 0.6);
+                text-decoration: none;
+                transition: all 0.3s ease;
+                font-size: 0.95rem;
+
+                &:hover {
+                    color: white;
+                    padding-left: 5px;
+                }
+            }
+        }
+    }
+
+    .footer-social {
+        display: flex;
+        gap: 15px;
+
+        .social-icon {
+            color: rgba(255, 255, 255, 0.5);
+            transition: all 0.3s ease;
+            
+            &:hover {
+                color: var(--blue);
+                transform: translateY(-3px);
+            }
+        }
+    }
+
+    .footer-contact-info {
+        font-size: 0.95rem;
+        margin-bottom: 12px;
+        display: flex;
+        align-items: center;
+        
+        span {
+            color: var(--blue);
+        }
+    }
+
+    .newsletter-box {
+        .tc-newsletter-input {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: white;
+            border-radius: var(--radius-md) 0 0 var(--radius-md);
+            height: 44px;
+            
+            &:focus {
+                border-color: var(--blue);
+                background: rgba(255, 255, 255, 0.1);
+            }
+        }
+
+        .tc-newsletter-btn {
+            background: var(--blue);
+            color: white;
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+            height: 44px;
+            line-height: 44px;
+            padding: 0 20px;
+            border: none;
+            font-weight: 700;
+            transition: all 0.3s ease;
+
+            &:hover {
+                background: darken(#0062E0, 10%);
+            }
+        }
+    }
+
+    .footer-divider {
+        border-color: rgba(255, 255, 255, 0.05);
+    }
+
+    .footer-bottom {
+        p {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.4);
+        }
+        
+        .uk-subnav {
+            li a {
+                color: rgba(255, 255, 255, 0.4);
+                &:hover { color: white; }
+            }
+        }
+    }
+}
+
+@media (max-width: 960px) {
+    .tc-footer {
+        text-align: center;
+        
+        .footer-title::after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .footer-social {
+            justify-content: center;
+        }
+        
+        .footer-contact-info {
+            justify-content: center;
+        }
+        
+        .uk-flex {
+            justify-content: center;
+        }
+    }
+}

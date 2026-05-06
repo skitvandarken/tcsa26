@@ -1,66 +1,255 @@
-<nav class="uk-navbar-container">
-    <div class="uk-container">
-        <div uk-navbar>
+<div uk-sticky="sel-target: .tc-navbar; cls-active: uk-navbar-sticky; show-on-up: true; animation: uk-animation-slide-top">
+    <nav class="uk-navbar-container tc-navbar">
+
+    <div class="uk-container uk-container-expand">
+        <div uk-navbar="offset: 20">
 
             <div class="uk-navbar-left">
+                <a class="uk-navbar-item uk-logo tc-logo" href="/home">
+                    <span class="logo-text">TEL <span class="highlight">CABLES</span></span>
+                </a>
 
-                <ul class="uk-navbar-nav">
+                <ul class="uk-navbar-nav uk-visible@m tc-nav-links">
                     <li>
-                        <a href="#">We Are Tel Cables</a>
-                        <div class="uk-navbar-dropdown">
+                        <a href="#">We Are Tel Cables <span uk-navbar-parent-icon></span></a>
+                        <div class="uk-navbar-dropdown tc-dropdown">
                             <ul class="uk-nav uk-navbar-dropdown-nav">
-                                <li class="uk-active"><a href="#">Introduction to TCSA</a></li>
-                                <li><a href="#">Our TCSA Team</a></li>
-                                <li><a href="#">Request A Meeting</a></li>
+                                <li class="uk-active"><a href="/home">Introduction to TCSA</a></li>
+                                <li><a href="/team">Our TCSA Team</a></li>
+                                <li><a href="/meeting">Request A Meeting</a></li>
                             </ul>
                         </div>
                     </li>
                     <li>
-                        <a href="#">Services</a>
-                        <div class="uk-navbar-dropdown">
-                            <ul class="uk-nav uk-navbar-dropdown-nav">
-                                <li class="uk-active"><a href="#">Active</a></li>
-                                <li><a href="#">Item</a></li>
-                                <li><a href="#">Item</a></li>
-                            </ul>
+                        <a href="#">Services <span uk-navbar-parent-icon></span></a>
+                        <div class="uk-navbar-dropdown tc-mega-menu" uk-drop="mode: click; pos: bottom-justify; boundary: .tc-navbar; boundary-align: true; offset: 0">
+                            <div class="uk-container">
+                                <div class="uk-grid-large uk-child-width-1-3@m uk-padding-large" uk-grid>
+                                    <!-- Enterprise Solutions -->
+                                    <div>
+                                        <h3 class="tc-menu-header">Enterprise Solutions</h3>
+                                        <ul class="uk-nav uk-navbar-dropdown-nav">
+                                            <li class="uk-nav-header">Connectivity</li>
+                                            <li>
+                                                <a href="/services/dia" class="tc-menu-parent">DIA</a>
+                                                <ul class="uk-nav-sub">
+                                                    <li><a href="/services/dia#overview">Overview</a></li>
+                                                    <li><a href="/services/dia#solutions">Solutions</a></li>
+                                                    <li><a href="/services/dia#features">Features & Benefits</a></li>
+                                                    <li><a href="/meeting">Contact Us</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="uk-margin-small-top">
+                                                <a href="/services/ip-transit" class="tc-menu-parent">IP Transit</a>
+                                                <ul class="uk-nav-sub">
+                                                    <li><a href="/services/ip-transit#overview">Overview</a></li>
+                                                    <li><a href="/services/ip-transit#solutions">Solutions</a></li>
+                                                    <li><a href="/services/ip-transit#features">Features & Benefits</a></li>
+                                                    <li><a href="/meeting">Contact Us</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="uk-margin-small-top">
+                                                <a href="/services/metro-connect" class="tc-menu-parent">Metro Connect</a>
+                                                <ul class="uk-nav-sub">
+                                                    <li><a href="/services/metro-connect#overview">To DC - To DC</a></li>
+                                                    <li><a href="/services/metro-connect#features">Features & Benefits</a></li>
+                                                    <li><a href="/meeting">Contact Us</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="uk-margin-small-top">
+                                                <a href="/services/remote-peering" class="tc-menu-parent">Remote Peering</a>
+                                                <ul class="uk-nav-sub">
+                                                    <li><a href="/services/remote-peering#overview">Overview</a></li>
+                                                    <li><a href="/services/remote-peering#solutions">Solutions</a></li>
+                                                    <li><a href="/services/remote-peering#features">Features & Benefits</a></li>
+                                                    <li><a href="/meeting">Contact Us</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Wholesale Solutions -->
+                                    <div>
+                                        <h3 class="tc-menu-header">Wholesale Solutions</h3>
+                                        <ul class="uk-nav uk-navbar-dropdown-nav">
+                                            <li class="uk-nav-header">Connectivity</li>
+                                            <li>
+                                                <a href="/services/wholesale-dia" class="tc-menu-parent">DIA</a>
+                                                <ul class="uk-nav-sub">
+                                                    <li><a href="/services/wholesale-dia#overview">Overview</a></li>
+                                                    <li><a href="/services/wholesale-dia#solutions">Solutions</a></li>
+                                                    <li><a href="/services/wholesale-dia#features">Features & Benefits</a></li>
+                                                    <li><a href="/meeting">Contact Us</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="uk-margin-small-top">
+                                                <a href="/services/iplc" class="tc-menu-parent">IPLC</a>
+                                                <ul class="uk-nav-sub">
+                                                    <li><a href="/services/iplc#overview">Overview</a></li>
+                                                    <li><a href="/services/iplc#solutions">Solutions</a></li>
+                                                    <li><a href="/services/iplc#features">Features & Benefits</a></li>
+                                                    <li><a href="/meeting">Contact Us</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="uk-margin-small-top">
+                                                <a href="/services/wholesale-remote-peering" class="tc-menu-parent">Remote Peering</a>
+                                                <ul class="uk-nav-sub">
+                                                    <li><a href="/services/wholesale-remote-peering#overview">Overview</a></li>
+                                                    <li><a href="/services/wholesale-remote-peering#solutions">Solutions</a></li>
+                                                    <li><a href="/services/wholesale-remote-peering#features">Features & Benefits</a></li>
+                                                    <li><a href="/meeting">Contact Us</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Data Center -->
+                                    <div>
+                                        <h3 class="tc-menu-header">Data Center</h3>
+                                        <ul class="uk-nav uk-navbar-dropdown-nav">
+                                            <li>
+                                                <a href="/services/gdi" class="tc-menu-parent">GDI</a>
+                                                <ul class="uk-nav-sub">
+                                                    <li><a href="/services/gdi#overview">Overview</a></li>
+                                                    <li><a href="/services/gdi#solutions">Solutions</a></li>
+                                                    <li><a href="/services/gdi#features">Features & Benefits</a></li>
+                                                    <li><a href="/meeting">Contact Us</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="uk-margin-small-top">
+                                                <a href="/services/co-location" class="tc-menu-parent">Co-location</a>
+                                                <ul class="uk-nav-sub">
+                                                    <li><a href="/services/co-location#overview">Overview</a></li>
+                                                    <li><a href="/services/co-location#solutions">Solutions</a></li>
+                                                    <li><a href="/services/co-location#features">Features & Benefits</a></li>
+                                                    <li><a href="/meeting">Contact Us</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="uk-margin-small-top">
+                                                <a href="/services/managed-services" class="tc-menu-parent">Managed Services</a>
+                                                <ul class="uk-nav-sub">
+                                                    <li><a href="/services/managed-services#overview">Overview</a></li>
+                                                    <li><a href="/services/managed-services#solutions">Solutions</a></li>
+                                                    <li><a href="/services/managed-services#features">Features & Benefits</a></li>
+                                                    <li><a href="/meeting">Contact Us</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="uk-margin-small-top">
+                                                <a href="/services/smart-hands" class="tc-menu-parent">Smart Hands</a>
+                                                <ul class="uk-nav-sub">
+                                                    <li><a href="/services/smart-hands#overview">Overview</a></li>
+                                                    <li><a href="/services/smart-hands#solutions">Solutions</a></li>
+                                                    <li><a href="/services/smart-hands#features">Features & Benefits</a></li>
+                                                    <li><a href="/meeting">Contact Us</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="uk-margin-small-top">
+                                                <a href="/services/remote-support" class="tc-menu-parent">Remote Hands & Support</a>
+                                                <ul class="uk-nav-sub">
+                                                    <li><a href="/services/remote-support#overview">Overview</a></li>
+                                                    <li><a href="/services/remote-support#features">Features & Benefits</a></li>
+                                                    <li><a href="/meeting">Contact Us</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </li>
                     <li>
-                        <a href="#">Network</a>
-                        <div class="uk-navbar-dropdown">
-                            <ul class="uk-nav uk-navbar-dropdown-nav">
-                                <li class="uk-active"><a href="#">Active</a></li>
-                                <li><a href="#">Item</a></li>
-                                <li><a href="#">Item</a></li>
-                            </ul>
+                        <a href="#">Network <span uk-navbar-parent-icon></span></a>
+                        <div class="uk-navbar-dropdown tc-mega-menu" uk-drop="mode: click; pos: bottom-justify; boundary: .tc-navbar; boundary-align: true; offset: 0">
+                            <div class="uk-container">
+                                <div class="uk-grid-large uk-child-width-1-4@m uk-padding-large" uk-grid>
+                                    <!-- Coverage Map -->
+                                    <div>
+                                        <h3 class="tc-menu-header"><span class="uk-margin-small-right">🌍</span> Coverage Map</h3>
+                                        <ul class="uk-nav uk-navbar-dropdown-nav">
+                                            <li><a href="/network/global"><span uk-icon="chevron-right" class="uk-margin-small-right"></span>Global Network</a></li>
+                                            <li><a href="/network/assets"><span uk-icon="chevron-right" class="uk-margin-small-right"></span>On-net Assets</a></li>
+                                        </ul>
+                                        <div class="uk-margin-top tc-menu-note">
+                                            <a href="/network/global" class="uk-link-text"><span uk-icon="arrow-right"></span> Get to know our operations</a>
+                                        </div>
+                                    </div>
+
+                                    <!-- Infrastructure -->
+                                    <div>
+                                        <h3 class="tc-menu-header"><span class="uk-margin-small-right">📡</span> Infrastructure</h3>
+                                        <ul class="uk-nav uk-navbar-dropdown-nav">
+                                            <li><a href="/network/ixps"><span uk-icon="chevron-right" class="uk-margin-small-right"></span>IXPs</a></li>
+                                            <li><a href="/network/pops"><span uk-icon="chevron-right" class="uk-margin-small-right"></span>PoPs</a></li>
+                                            <li><a href="/network/peering"><span uk-icon="chevron-right" class="uk-margin-small-right"></span>Peering Agreements</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Regional Coverage -->
+                                    <div>
+                                        <h3 class="tc-menu-header"><span class="uk-margin-small-right">🇿🇦</span> Regional Coverage</h3>
+                                        <ul class="uk-nav uk-navbar-dropdown-nav">
+                                            <li><a href="/network/regional"><span uk-icon="chevron-right" class="uk-margin-small-right"></span>South Africa Network</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Certifications -->
+                                    <div>
+                                        <h3 class="tc-menu-header"><span class="uk-margin-small-right">🏅</span> Certifications</h3>
+                                        <ul class="uk-nav uk-navbar-dropdown-nav">
+                                            <li><a href="/network/certifications"><span uk-icon="chevron-right" class="uk-margin-small-right"></span>CAIDA Ranking</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </li>
-                    <li><a href="#">Partner Program</a></li>
-                    <li><a href="#">Contact Us </a></li>
-
-
+                    <li><a href="https://partners.angolacables.co.ao/" target="_blank">Partner Program</a></li>
                 </ul>
 
             </div>
 
             <div class="uk-navbar-right">
 
-                <ul class="uk-navbar-nav">
-
-                    <li><a href="#">Login</a></li>
-                    <li>
-                        <a href="#">Language</a>
-                        <div class="uk-navbar-dropdown">
+                <ul class="uk-navbar-nav tc-nav-links">
+                    <li class="uk-visible@s"><a href="#">Login</a></li>
+                    <li class="uk-visible@s">
+                        <a href="#">EN <span uk-navbar-parent-icon></span></a>
+                        <div class="uk-navbar-dropdown tc-dropdown uk-navbar-dropdown-width-1-2">
                             <ul class="uk-nav uk-navbar-dropdown-nav">
                                 <li class="uk-active"><a href="#">English</a></li>
                                 <li><a href="#">French</a></li>
+                                <li><a href="#">Portuguese</a></li>
                             </ul>
                         </div>
                     </li>
+                    <li class="tc-cta-item">
+                        <div class="uk-navbar-item">
+                            <a class="uk-button uk-button-default tc-btn-contact" href="/meeting">Contact Us</a>
+                        </div>
+                    </li>
                 </ul>
+                
+                <a class="uk-navbar-toggle uk-hidden@m" uk-navbar-toggle-icon href="#" uk-toggle="target: #mobile-menu"></a>
 
             </div>
 
         </div>
     </div>
 </nav>
+</div>
+
+
+<!-- Mobile Menu Off-canvas (Simplified for now) -->
+<div id="mobile-menu" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar">
+        <button class="uk-offcanvas-close" type="button" uk-close></button>
+        <ul class="uk-nav uk-nav-default">
+            <li class="uk-active"><a href="/home">Home</a></li>
+            <li><a href="/team">Our TCSA Team</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Network</a></li>
+            <li><a href="#">Partner Program</a></li>
+            <li><a href="/meeting">Contact Us</a></li>
+        </ul>
+    </div>
+</div>
