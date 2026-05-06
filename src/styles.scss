@@ -1,1 +1,41 @@
-/* You can add global styles to this file, and also import other style files */
+
+/* ─── Google Fonts ─── */
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* ─── Reset ─── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; background: var(--bg-deep); font-family: var(--font-body); color: var(--text-hi); }
+
+/* ─── CSS Variables ─── */:root {
+  /* Backgrounds - Invertidos para claridade */
+  --bg-deep:  #F4F7FA;    /* Um cinza muito claro com um toque de azul */
+  --bg-shell: #FFFFFF;   /* Branco puro para áreas de destaque */
+  --bg-panel: #EBF0F5;   /* Fundo levemente mais escuro para profundidade */
+  --bg-card: #FFFFFF;    /* Cards brancos para elevar do fundo */
+  --bg-hover: rgba(0, 112, 255, 0.05); /* Hover sutil usando o azul da marca */
+
+  /* Bordas - Ajustadas para contraste em fundo claro */
+  --border: #D1DBE5;
+  --border-hi: #B8C7D6;
+
+  /* Texto - Inversão de hierarquia */
+  --text-hi: #0D1F2D;    /* O antigo bg-panel agora é a cor de texto principal */
+  --text-mid: #4A5F73;   /* Cinza médio para leitura secundária */
+  --text-lo: #708AA3;    /* Texto de apoio ou desativado */
+
+  /* Cores de Destaque - Mantidas ou levemente ajustadas para legibilidade */
+  --teal: #00BFA5;       /* Um pouco mais escuro para contraste em branco */
+  --teal-dim: rgba(0, 191, 165, 0.1);
+  --blue: #0062E0;       /* Azul levemente mais profundo */
+  --orange: #EF5B25;     /* Laranja ajustado para contraste */
+  --red: #D32F2F;        /* Vermelho acessível */
+
+  /* Fontes e Raio - Mantidos conforme o original */
+  --font-body: 'DM Sans', sans-serif;
+  --font-display: 'Syne', sans-serif;
+  --font-mono: 'JetBrains Mono', sans-serif;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+
+}
