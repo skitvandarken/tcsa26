@@ -29,7 +29,15 @@
     "@angular/forms": "^20.3.0",
     "@angular/platform-browser": "^20.3.0",
     "@angular/router": "^20.3.0",
+<<<<<<< HEAD
     "firebase": "^11.10.0",
+=======
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "firebase": "^11.10.0",
+    "firebase-admin": "^13.8.0",
+>>>>>>> e49c80ad8633c1a37761f7745edf8b7de9fbd20f
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "uikit": "^3.25.16"
