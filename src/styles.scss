@@ -37,5 +37,26 @@ html, body { height: 100%; background: var(--bg-deep); font-family: var(--font-b
   --radius-sm: 6px;
   --radius-md: 8px;
   --radius-lg: 12px;
+  --section-padding: 80px;
+}
 
+.uk-section {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+
+/* ─── Dark Theme Overrides ─── */
+body.dark-theme {
+  --bg-deep: #0a0e14;
+  --bg-shell: #121820;
+  --bg-panel: #1a222c;
+  --bg-card: #1a222c;
+  --text-hi: #f0f4f8;
+  --text-mid: #a0aec0;
+  --text-lo: #718096;
+  --border: #2d3748;
+  --border-hi: #4a5568;
+  
+  background-color: var(--bg-deep);
+  color: var(--text-hi);
 }

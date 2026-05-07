@@ -1,0 +1,212 @@
+<app-navbar></app-navbar>
+
+<div class="dashboard-container">
+  <!-- Sidebar -->
+  <aside class="dashboard-sidebar">
+    <div class="sidebar-user">
+      <div class="user-avatar">
+        <i uk-icon="icon: user; ratio: 1.5"></i>
+      </div>
+      <div class="user-info">
+        <h3>{{ (user$ | async)?.displayName || 'Utilizador TCSA' }}</h3>
+        <p>{{ (user$ | async)?.email }}</p>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <ul>
+        <li [class.active]="activeTab === 'overview'" (click)="setTab('overview')">
+          <i uk-icon="grid"></i> Visão Geral
+        </li>
+        <li [class.active]="activeTab === 'layout'" (click)="setTab('layout')">
+          <i uk-icon="settings"></i> Personalizar Layout
+        </li>
+        <li [class.active]="activeTab === 'services'" (click)="setTab('services')">
+          <i uk-icon="list"></i> Meus Serviços
+        </li>
+        <li [class.active]="activeTab === 'profile'" (click)="setTab('profile')">
+          <i uk-icon="user"></i> Perfil
+        </li>
+      </ul>
+    </nav>
+
+    <div class="sidebar-footer">
+      <button class="logout-btn" (click)="handleSignOut()">
+        <i uk-icon="sign-out"></i> Sair da Conta
+      </button>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="dashboard-main">
+    <header class="main-header">
+      <div class="header-content">
+        <h1>{{ activeTab === 'layout' ? 'Personalizar Tela Inicial' : 'Painel de Controlo' }}</h1>
+        <p>Gira as definições da sua experiência TCSA.</p>
+      </div>
+    </header>
+
+    <div class="main-content">
+      <!-- Layout Settings Tab -->
+      <div *ngIf="activeTab === 'layout'" class="settings-grid" uk-scrollspy="cls: uk-animation-fade; delay: 100">
+        <div class="settings-card">
+          <div class="card-header">
+            <h3>Visual & Temas</h3>
+            <p>Escolha como o portal deve aparecer para si.</p>
+          </div>
+          
+          <div class="settings-form">
+            <div class="setting-item">
+              <div class="setting-info">
+                <h4>Modo de Visualização</h4>
+                <p>Alternar entre modo claro e escuro.</p>
+              </div>
+              <div class="setting-control">
+                <select [(ngModel)]="layoutSettings.theme" class="uk-select">
+                  <option value="light">Modo Claro</option>
+                  <option value="dark">Modo Escuro (Beta)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="setting-item">
+              <div class="setting-info">
+                <h4>Cor Principal</h4>
+                <p>Personalize a cor de destaque do sistema.</p>
+              </div>
+              <div class="setting-control">
+                <input type="color" [(ngModel)]="layoutSettings.primaryColor" class="uk-input">
+              </div>
+            </div>
+
+            <div class="setting-item">
+              <div class="setting-info">
+                <h4>Arredondamento (Radius)</h4>
+                <p>Nível de curvatura de botões e cards.</p>
+              </div>
+              <div class="setting-control">
+                <select [(ngModel)]="layoutSettings.borderRadius" class="uk-select">
+                  <option value="none">Nenhum (0px)</option>
+                  <option value="small">Suave (4px)</option>
+                  <option value="medium">Padrão (8px)</option>
+                  <option value="large">Redondo (16px)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="setting-item">
+              <div class="setting-info">
+                <h4>Estilo de Tipografia</h4>
+                <p>Escolha a personalidade da fonte.</p>
+              </div>
+              <div class="setting-control">
+                <select [(ngModel)]="layoutSettings.fontStyle" class="uk-select">
+                  <option value="modern">Moderno (Syne)</option>
+                  <option value="professional">Executivo (System)</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="settings-card">
+          <div class="card-header">
+            <h3>Estrutura & Navegação</h3>
+            <p>Ajuste como os elementos são organizados.</p>
+          </div>
+          
+          <div class="settings-form">
+            <div class="setting-item">
+              <div class="setting-info">
+                <h4>Estilo da Navbar</h4>
+                <p>Efeito visual da barra superior.</p>
+              </div>
+              <div class="setting-control">
+                <select [(ngModel)]="layoutSettings.navbarStyle" class="uk-select">
+                  <option value="solid">Sólido</option>
+                  <option value="glass">Efeito Vidro (Blur)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="setting-item">
+              <div class="setting-info">
+                <h4>Densidade do Layout</h4>
+                <p>Espaçamento entre as secções.</p>
+              </div>
+              <div class="setting-control">
+                <select [(ngModel)]="layoutSettings.density" class="uk-select">
+                  <option value="compact">Compacto</option>
+                  <option value="relaxed">Relaxado (Espaçoso)</option>
+                </select>
+              </div>
+            </div>
+            <div class="setting-item">
+              <div class="setting-info">
+                <h4>Slider Principal (Hero)</h4>
+                <p>Mostrar o carrossel de notícias no topo.</p>
+              </div>
+              <div class="setting-control">
+                <label class="switch">
+                  <input type="checkbox" [(ngModel)]="layoutSettings.showHeroSlider">
+                  <span class="slider round"></span>
+                </label>
+              </div>
+            </div>
+
+            <div class="setting-item">
+              <div class="setting-info">
+                <h4>Contador de Estatísticas</h4>
+                <p>Exibir números de rede e alcance global.</p>
+              </div>
+              <div class="setting-control">
+                <label class="switch">
+                  <input type="checkbox" [(ngModel)]="layoutSettings.showStatsCounter">
+                  <span class="slider round"></span>
+                </label>
+              </div>
+            </div>
+
+            <div class="setting-item">
+              <div class="setting-info">
+                <h4>Serviços em Destaque</h4>
+                <p>Mostrar grelha de soluções DIA, IP Transit, etc.</p>
+              </div>
+              <div class="setting-control">
+                <label class="switch">
+                  <input type="checkbox" [(ngModel)]="layoutSettings.showFeaturedServices">
+                  <span class="slider round"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="actions-bar">
+          <button class="save-btn" (click)="saveSettings()">
+            <i uk-icon="check" class="uk-margin-small-right"></i> Guardar Alterações
+          </button>
+        </div>
+      </div>
+
+      <!-- Overview Tab -->
+      <div *ngIf="activeTab === 'overview'" class="overview-stats">
+        <div class="stat-card">
+          <div class="stat-icon blue"><i uk-icon="world"></i></div>
+          <div class="stat-value">24/7</div>
+          <div class="stat-label">Suporte de Rede</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon green"><i uk-icon="bolt"></i></div>
+          <div class="stat-value">99.9%</div>
+          <div class="stat-label">Uptime Garantido</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon orange"><i uk-icon="server"></i></div>
+          <div class="stat-value">12</div>
+          <div class="stat-label">Serviços Ativos</div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>

@@ -16,30 +16,30 @@ export class Meeting {
     name: '',
     email: '',
     company: '',
-    interest: 'IP Transit',
-    date: '',
+    interest: '',
     message: ''
   };
 
   interests = [
-    'IP Transit',
-    'Cloud Connect',
-    'Remote Peering',
-    'Submarine Cables',
-    'Anti-DDoS',
-    'Other'
+    'Enterprise Solutions (DIA, IP Transit)',
+    'Wholesale Connectivity (IPLC, Global Network)',
+    'Data Center & Co-location',
+    'Remote Peering & IXPs',
+    'Managed Services & Smart Hands',
+    'Partner Program',
+    'General Inquiry'
   ];
 
   onSubmit() {
-    console.log('Form Submitted:', this.formData);
-    alert('Thank you! Your meeting request has been sent. Our team will contact you shortly.');
+    console.log('Contact Form Submitted:', this.formData);
+    alert('Thank you for contacting TelCables South Africa! Your message has been received, and our team will get back to you shortly.');
+    
     // Reset form
     this.formData = {
       name: '',
       email: '',
       company: '',
-      interest: 'IP Transit',
-      date: '',
+      interest: '',
       message: ''
     };
   }

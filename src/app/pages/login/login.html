@@ -1,1 +1,48 @@
-<p>login works!</p>
+<div class="login-container">
+  <a routerLink="/home" class="back-home-link">
+    <i uk-icon="arrow-left"></i> Voltar ao início
+  </a>
+  <div class="login-card">
+    <div class="login-header">
+      <div class="logo">
+        <span class="logo-text">TEL <span class="highlight">CABLES</span></span>
+      </div>
+      <h1>Bem-vindo de volta</h1>
+      <p>Aceda à sua conta TCSA para gerir os seus serviços.</p>
+    </div>
+
+    <form class="login-form" (ngSubmit)="onSubmit()" #loginForm="ngForm">
+      <div class="form-group">
+        <label for="email">E-mail</label>
+        <div class="input-wrapper">
+          <i class="input-icon" uk-icon="mail"></i>
+          <input type="email" id="email" name="email" [(ngModel)]="credentials.email" placeholder="exemplo@telcables.co.za" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Palavra-passe</label>
+        <div class="input-wrapper">
+          <i class="input-icon" uk-icon="lock"></i>
+          <input type="password" id="password" name="password" [(ngModel)]="credentials.password" placeholder="••••••••" required>
+        </div>
+      </div>
+
+      <div class="form-options">
+        <label class="remember-me">
+          <input type="checkbox" name="remember"> Lembrar-me
+        </label>
+        <a routerLink="/forgot-password" class="forgot-password">Esqueceu a senha?</a>
+      </div>
+
+      <button type="submit" class="login-btn" [disabled]="!loginForm.form.valid">
+        <span *ngIf="!isLoading">Entrar</span>
+        <span *ngIf="isLoading" uk-spinner="ratio: 0.8"></span>
+      </button>
+    </form>
+
+    <div class="login-footer">
+      <p>Não tem uma conta? <a routerLink="/register">Criar conta</a></p>
+    </div>
+  </div>
+</div>

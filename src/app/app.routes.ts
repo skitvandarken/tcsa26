@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-
+import { authGuard } from './guards/auth.guard';
 
 export const routes: Routes =[
   {
@@ -10,6 +10,14 @@ export const routes: Routes =[
   {
     path: 'login',
     loadComponent: () => import('./pages/login/login').then(m => m.Login),
+  },
+  {
+    path: 'register',
+    loadComponent: () => import('./pages/register/register').then(m => m.Register),
+  },
+  {
+    path: 'forgot-password',
+    loadComponent: () => import('./pages/forgot-password/forgot-password').then(m => m.ForgotPassword),
   },
   {
     path: 'home', 
@@ -99,6 +107,11 @@ export const routes: Routes =[
   {
     path: 'network/pops', 
     loadComponent: () => import('./pages/network/infrastructure/pops').then(m => m.Pops),
+  },
+  {
+    path: 'dashboard',
+    canActivate: [authGuard],
+    loadComponent: () => import('./pages/dashboard/dashboard').then(m => m.Dashboard),
   },
   {
     path: 'network/peering', 

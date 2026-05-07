@@ -1,13 +1,22 @@
-import { Component, AfterViewInit, ElementRef } from '@angular/core';
+import { Component, AfterViewInit, ElementRef, inject } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { LayoutService } from '../../services/layout.service';
+import { TranslationService } from '../../services/translation.service';
+import { TranslatePipe } from '../../pipes/translate.pipe';
 
 @Component({
   selector: 'app-hero',
-  imports: [],
+  standalone: true,
+  imports: [CommonModule, TranslatePipe],
   templateUrl: './hero.html',
   styleUrl: './hero.scss',
 })
 export class Hero implements AfterViewInit {
-  constructor(private el: ElementRef) {}
+  private el = inject(ElementRef);
+  layoutService = inject(LayoutService);
+  translationService = inject(TranslationService);
+  
+  settings = this.layoutService.settings;
 
   ngAfterViewInit(): void {
     this.initCounters();
